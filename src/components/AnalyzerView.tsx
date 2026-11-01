@@ -9,6 +9,7 @@ import {
   Sparkles, FileText, Cpu, ArrowRight, Clipboard, Trash2, Info, Check
 } from 'lucide-react';
 import { AnalysisResult } from '../../server/nlpEngine.ts';
+import { generateAnalysisPdf } from '../utils/pdfGenerator.ts';
 
 interface AnalyzerViewProps {
   initialText?: string;
@@ -385,20 +386,29 @@ Probabilistic NLP inference. Cross-verify sensitive requests out-of-band.
               <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
                 <span>Analysis ID: <strong>{result.id}</strong></span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  onClick={() => generateAnalysisPdf(result)}
+                  className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-3.5 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 shadow-[0_0_12px_rgba(6,182,212,0.3)] cursor-pointer"
+                  title="Generate and download formatted Academic PDF Report"
+                >
+                  <FileText className="w-3.5 h-3.5 text-slate-950" />
+                  <span>Export PDF Report</span>
+                </button>
                 <button
                   onClick={handleCopyReport}
                   className="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 px-3 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 cursor-pointer"
                 >
                   {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-cyan-400" />}
-                  <span>{copied ? 'Copied to Clipboard!' : 'Copy Audit Summary'}</span>
+                  <span>{copied ? 'Copied!' : 'Copy Summary'}</span>
                 </button>
                 <button
                   onClick={handleDownloadReport}
                   className="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 px-3 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 cursor-pointer"
+                  title="Download plain text analysis summary"
                 >
                   <Download className="w-3.5 h-3.5 text-cyan-400" />
-                  <span>Download Report</span>
+                  <span>Download Text</span>
                 </button>
                 {onInspectIn3D && (
                   <button

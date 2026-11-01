@@ -6,9 +6,10 @@
 import React, { useState, useEffect } from 'react';
 import { 
   BarChart3, Shield, AlertTriangle, CheckCircle2, Trash2, Search, 
-  RotateCcw, Filter, ExternalLink, Calendar, Eye, Download
+  RotateCcw, Filter, ExternalLink, Calendar, Eye, Download, FileText
 } from 'lucide-react';
 import { AnalysisResult } from '../../server/nlpEngine.ts';
+import { generateAnalysisPdf } from '../utils/pdfGenerator.ts';
 
 interface DashboardStats {
   totalAnalyzed: number;
@@ -439,8 +440,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onSelectRecordForI
                     <td className="py-3 px-3 text-right whitespace-nowrap">
                       <div className="flex items-center justify-end gap-2">
                         <button
-                          onClick={() => setActiveModalRecord(record)}
+                          onClick={() => generateAnalysisPdf(record)}
                           className="text-cyan-400 hover:text-cyan-300 p-1 rounded hover:bg-slate-800 cursor-pointer"
+                          title="Download Academic PDF Report"
+                        >
+                          <FileText className="w-3.5 h-3.5" />
+                        </button>
+                        <button
+                          onClick={() => setActiveModalRecord(record)}
+                          className="text-slate-400 hover:text-white p-1 rounded hover:bg-slate-800 cursor-pointer"
                           title="View Full Audit"
                         >
                           <Eye className="w-3.5 h-3.5" />
@@ -536,10 +544,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onSelectRecordForI
               )}
             </div>
 
-            <div className="pt-3 border-t border-slate-800 flex justify-end">
+            <div className="pt-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2">
+              <button
+                onClick={() => generateAnalysisPdf(activeModalRecord)}
+                className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-3.5 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 shadow-[0_0_12px_rgba(6,182,212,0.3)] cursor-pointer"
+              >
+                <FileText className="w-3.5 h-3.5 text-slate-950" />
+                <span>Export Formatted PDF Report</span>
+              </button>
               <button
                 onClick={() => setActiveModalRecord(null)}
-                className="bg-cyan-500 text-slate-950 font-bold px-4 py-1.5 rounded-lg text-xs font-mono cursor-pointer"
+                className="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-4 py-1.5 rounded-lg text-xs font-mono cursor-pointer"
               >
                 Close Audit View
               </button>
