@@ -1,0 +1,476 @@
+[
+  {
+    "id": "CG-mvy060kd-qj1u",
+    "text": "URGENT: Your bank account will be blocked today due to pending KYC verification. Click http://kyc-update-portal.org to upload Aadhaar and PAN card immediately.",
+    "timestamp": "2026-11-01T15:46:33.181Z",
+    "prediction": "Malicious",
+    "confidence": 78,
+    "attackCategory": "Financial fraud",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [
+      {
+        "word": "URGENT",
+        "category": "Urgency-based manipulation",
+        "weight": 0.85,
+        "reason": "High urgency cue designed to induce panic and bypass rational caution."
+      },
+      {
+        "word": "blocked",
+        "category": "Urgency-based manipulation",
+        "weight": 0.85,
+        "reason": "High urgency cue designed to induce panic and bypass rational caution."
+      },
+      {
+        "word": "immediately",
+        "category": "Urgency-based manipulation",
+        "weight": 0.85,
+        "reason": "High urgency cue designed to induce panic and bypass rational caution."
+      },
+      {
+        "word": "bank account",
+        "category": "Financial fraud",
+        "weight": 0.88,
+        "reason": "Direct financial solicitation or unverified money movement request."
+      },
+      {
+        "word": "http://kyc-update-portal.org",
+        "category": "Phishing",
+        "weight": 0.75,
+        "reason": "Unverified link or shortened URL commonly used to disguise destination domain."
+      }
+    ],
+    "highlightedHtml": "<mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold inline-block my-0.5\" title=\"Urgency-based manipulation: High urgency cue designed to induce panic and bypass rational caution.\">URGENT</mark>: Your <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold inline-block my-0.5\" title=\"Financial fraud: Direct financial solicitation or unverified money movement request.\">bank account</mark> will be <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold inline-block my-0.5\" title=\"Urgency-based manipulation: High urgency cue designed to induce panic and bypass rational caution.\">blocked</mark> today due to pending KYC verification. Click <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold inline-block my-0.5\" title=\"Phishing: Unverified link or shortened URL commonly used to disguise destination domain.\">http://kyc-update-portal.org</mark> to upload Aadhaar and PAN card <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold inline-block my-0.5\" title=\"Urgency-based manipulation: High urgency cue designed to induce panic and bypass rational caution.\">immediately</mark>.",
+    "explanation": {
+      "summary": "The NLP model flagged this communication with a 78.0% risk score due to Urgency-based manipulation, Financial fraud, Phishing.",
+      "linguisticFlags": [
+        "Contains unverified hyper-link or URL shortener disguising the target host.",
+        "Identified 5 known social engineering trigger phrases.",
+        "Explicit solicitation of high-risk authentication credentials or tokens."
+      ],
+      "psychologicalTactics": [
+        "Urgency Induction: Pressures the recipient into making immediate decisions before verifying claims.",
+        "Financial Coercion: Evokes panic over frozen funds, fraudulent invoices, or false monetary windfalls."
+      ],
+      "technicalIndicators": [
+        "Unregistered / Obfuscated Link Detected"
+      ]
+    },
+    "recommendations": [
+      "DO NOT click any links, open attachments, or dial phone numbers specified in this message.",
+      "Verify the identity of the sender through an official, out-of-band communication channel (e.g., official banking app or corporate directory).",
+      "If corporate credentials were entered, immediately reset your enterprise password and notify your IT Security / SOC team.",
+      "Block the sender address or number and mark this message as Phishing / Spam in your client."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 66,
+      "nbScore": 75,
+      "tfidfFeatureCount": 591,
+      "tokenCount": 21
+    }
+  },
+  {
+    "id": "CG-mvy05wvz-tr35",
+    "text": "Hey team, the project sync meeting is moved to 4 PM in Conference Room B.",
+    "timestamp": "2026-11-01T15:46:28.415Z",
+    "prediction": "Safe",
+    "confidence": 82,
+    "attackCategory": "Legitimate communication",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [],
+    "highlightedHtml": "Hey team, the project sync meeting is moved to 4 PM in Conference Room B.",
+    "explanation": {
+      "summary": "Natural language analysis indicates neutral linguistic phrasing with low sentiment anomaly and absence of deceptive urgency or harvesting hooks.",
+      "linguisticFlags": [],
+      "psychologicalTactics": [],
+      "technicalIndicators": [
+        "Clean Link Profile"
+      ]
+    },
+    "recommendations": [
+      "Message appears legitimate based on standard natural language indicators.",
+      "Always practice standard cyber hygiene: verify unprecedented requests for money or sensitive files.",
+      "Never forward unsolicited codes or one-time passwords (OTP) to third parties."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 59,
+      "nbScore": 52,
+      "tfidfFeatureCount": 591,
+      "tokenCount": 8
+    }
+  },
+  {
+    "id": "CG-mvy047r7-kypx",
+    "text": "Hey team, the project sync meeting is moved to 4 PM in Conference Room B.",
+    "timestamp": "2026-11-01T15:45:09.187Z",
+    "prediction": "Suspicious",
+    "confidence": 56,
+    "attackCategory": "Urgency-based manipulation",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [],
+    "highlightedHtml": "Hey team, the project sync meeting is moved to 4 PM in Conference Room B.",
+    "explanation": {
+      "summary": "The NLP model flagged this communication with a 55.8% risk score due to anomalous term frequency distribution.",
+      "linguisticFlags": [],
+      "psychologicalTactics": [
+        "Cognitive Overload: Uses high-frequency alarming vocabulary to suppress analytical evaluation."
+      ],
+      "technicalIndicators": [
+        "Clean Link Profile"
+      ]
+    },
+    "recommendations": [
+      "Exercise caution: This message contains linguistic patterns commonly seen in deceptive outreach.",
+      "Avoid providing sensitive personal, financial, or authentication details via text or unsecured forms.",
+      "Inspect the destination URL domain carefully for subtle misspellings (typosquatting).",
+      "If unsure, cross-reference the request with official support channels before acting."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 59,
+      "nbScore": 52,
+      "tfidfFeatureCount": 591,
+      "tokenCount": 8
+    }
+  },
+  {
+    "id": "CG-mvy0428a-wr46",
+    "text": "Your PayPal account has been temporarily locked due to suspicious activity. Verify identity immediately: http://paypal-security-check.com/login",
+    "timestamp": "2026-11-01T15:45:02.026Z",
+    "prediction": "Malicious",
+    "confidence": 78,
+    "attackCategory": "Urgency-based manipulation",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [
+      {
+        "word": "immediately",
+        "category": "Urgency-based manipulation",
+        "weight": 0.85,
+        "reason": "High urgency cue designed to induce panic and bypass rational caution."
+      },
+      {
+        "word": "http://paypal-security-check.com/login",
+        "category": "Phishing",
+        "weight": 0.75,
+        "reason": "Unverified link or shortened URL commonly used to disguise destination domain."
+      }
+    ],
+    "highlightedHtml": "Your PayPal account has been temporarily locked due to suspicious activity. Verify identity <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold inline-block my-0.5\" title=\"Urgency-based manipulation: High urgency cue designed to induce panic and bypass rational caution.\">immediately</mark>: <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold inline-block my-0.5\" title=\"Phishing: Unverified link or shortened URL commonly used to disguise destination domain.\">http://paypal-security-check.com/login</mark>",
+    "explanation": {
+      "summary": "The NLP model flagged this communication with a 78.0% risk score due to Urgency-based manipulation, Phishing.",
+      "linguisticFlags": [
+        "Contains unverified hyper-link or URL shortener disguising the target host.",
+        "Identified 2 known social engineering trigger phrases."
+      ],
+      "psychologicalTactics": [
+        "Urgency Induction: Pressures the recipient into making immediate decisions before verifying claims."
+      ],
+      "technicalIndicators": [
+        "Unregistered / Obfuscated Link Detected"
+      ]
+    },
+    "recommendations": [
+      "DO NOT click any links, open attachments, or dial phone numbers specified in this message.",
+      "Verify the identity of the sender through an official, out-of-band communication channel (e.g., official banking app or corporate directory).",
+      "If corporate credentials were entered, immediately reset your enterprise password and notify your IT Security / SOC team.",
+      "Block the sender address or number and mark this message as Phishing / Spam in your client."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 66,
+      "nbScore": 76,
+      "tfidfFeatureCount": 591,
+      "tokenCount": 16
+    }
+  },
+  {
+    "id": "CG-lq87a-101",
+    "text": "Your PayPal account has been temporarily locked due to suspicious activity. Verify identity immediately: http://paypal-security-check.com/login",
+    "timestamp": "2026-11-01T12:44:43.607Z",
+    "prediction": "Malicious",
+    "confidence": 96,
+    "attackCategory": "Credential theft",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [
+      {
+        "word": "temporarily locked",
+        "category": "Urgency-based manipulation",
+        "weight": 0.85,
+        "reason": "False sense of immediate lock"
+      },
+      {
+        "word": "verify identity immediately",
+        "category": "Credential theft",
+        "weight": 0.9,
+        "reason": "Harvesting authentication details"
+      },
+      {
+        "word": "http://paypal-security-check.com",
+        "category": "Phishing",
+        "weight": 0.95,
+        "reason": "Unverified spoofed domain"
+      }
+    ],
+    "highlightedHtml": "Your PayPal account has been <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">temporarily locked</mark> due to suspicious activity. <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">Verify identity immediately</mark>: http://paypal-security-check.com/login",
+    "explanation": {
+      "summary": "The NLP model flagged this communication with a 96% risk score due to Credential theft, Urgency-based manipulation, Phishing.",
+      "linguisticFlags": [
+        "Contains unverified hyper-link disguising the target host.",
+        "Identified 3 known social engineering trigger phrases.",
+        "Solicits immediate login credentials."
+      ],
+      "psychologicalTactics": [
+        "Urgency Induction: Induces fear of account lock.",
+        "Authority Appeal: Impersonating PayPal security."
+      ],
+      "technicalIndicators": [
+        "Unregistered / Obfuscated Link Detected"
+      ]
+    },
+    "recommendations": [
+      "DO NOT click any links, open attachments, or dial phone numbers specified in this message.",
+      "Verify the identity of the sender through official PayPal mobile app.",
+      "Block the sender address or number."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 97,
+      "nbScore": 94,
+      "tfidfFeatureCount": 168,
+      "tokenCount": 14
+    }
+  },
+  {
+    "id": "CG-lq87b-102",
+    "text": "Hey team, the sprint planning meeting has been moved to 3:30 PM in Conference Room B. Please review the Jira backlog beforehand.",
+    "timestamp": "2026-11-01T09:44:43.607Z",
+    "prediction": "Safe",
+    "confidence": 98,
+    "attackCategory": "Legitimate communication",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [],
+    "highlightedHtml": "Hey team, the sprint planning meeting has been moved to 3:30 PM in Conference Room B. Please review the Jira backlog beforehand.",
+    "explanation": {
+      "summary": "Natural language analysis indicates neutral linguistic phrasing with low sentiment anomaly and absence of deceptive urgency or harvesting hooks.",
+      "linguisticFlags": [
+        "Zero suspicious terms detected."
+      ],
+      "psychologicalTactics": [],
+      "technicalIndicators": [
+        "Clean Link Profile"
+      ]
+    },
+    "recommendations": [
+      "Message appears legitimate based on standard natural language indicators.",
+      "Standard corporate communication tone detected."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 2,
+      "nbScore": 3,
+      "tfidfFeatureCount": 168,
+      "tokenCount": 16
+    }
+  },
+  {
+    "id": "CG-lq87c-103",
+    "text": "CONGRATULATIONS! You won $1,000,000 in Coca-Cola Global Sweepstakes! Send your bank details to claim payment.",
+    "timestamp": "2026-11-01T03:44:43.607Z",
+    "prediction": "Malicious",
+    "confidence": 94,
+    "attackCategory": "Prize and lottery scams",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [
+      {
+        "word": "CONGRATULATIONS",
+        "category": "Prize and lottery scams",
+        "weight": 0.82,
+        "reason": "Advance fee lottery scam hook"
+      },
+      {
+        "word": "won $1,000,000",
+        "category": "Prize and lottery scams",
+        "weight": 0.88,
+        "reason": "Unrealistic financial promise"
+      },
+      {
+        "word": "bank details",
+        "category": "Financial fraud",
+        "weight": 0.9,
+        "reason": "Solicitation of financial accounts"
+      }
+    ],
+    "highlightedHtml": "<mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">CONGRATULATIONS!</mark> You <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">won $1,000,000</mark> in Coca-Cola Global Sweepstakes! Send your <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">bank details</mark> to claim payment.",
+    "explanation": {
+      "summary": "The NLP model flagged this communication with a 94% risk score due to Prize and lottery scams, Financial fraud.",
+      "linguisticFlags": [
+        "Advance fee fraud pattern matching.",
+        "Solicitation of banking information."
+      ],
+      "psychologicalTactics": [
+        "Artificial Scarcity & Greed: Promises extreme payout to lower guard."
+      ],
+      "technicalIndicators": [
+        "Unsolicited Mass Outbound Pattern"
+      ]
+    },
+    "recommendations": [
+      "Never send bank details, identity proofs, or advance fees to claim unverified prizes.",
+      "Legitimate lotteries never contact winners via random SMS or email."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 95,
+      "nbScore": 92,
+      "tfidfFeatureCount": 168,
+      "tokenCount": 15
+    }
+  },
+  {
+    "id": "CG-lq87d-104",
+    "text": "Hi Mom, will reach home around 8 PM. Please don't wait for dinner, I grabbed a sandwich on campus.",
+    "timestamp": "2026-10-31T21:44:43.607Z",
+    "prediction": "Safe",
+    "confidence": 99,
+    "attackCategory": "Legitimate communication",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [],
+    "highlightedHtml": "Hi Mom, will reach home around 8 PM. Please don't wait for dinner, I grabbed a sandwich on campus.",
+    "explanation": {
+      "summary": "Natural language analysis indicates neutral linguistic phrasing with low sentiment anomaly and absence of deceptive urgency or harvesting hooks.",
+      "linguisticFlags": [
+        "Zero suspicious terms detected."
+      ],
+      "psychologicalTactics": [],
+      "technicalIndicators": [
+        "Clean Link Profile"
+      ]
+    },
+    "recommendations": [
+      "Message appears legitimate based on standard natural language indicators."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 1,
+      "nbScore": 2,
+      "tfidfFeatureCount": 168,
+      "tokenCount": 15
+    }
+  },
+  {
+    "id": "CG-lq87e-105",
+    "text": "URGENT: Your electricity connection will be disconnected tonight at 9:00 PM due to unpaid balance of Rs 1,420. Call officer immediately at 9876543210.",
+    "timestamp": "2026-10-31T15:44:43.607Z",
+    "prediction": "Malicious",
+    "confidence": 92,
+    "attackCategory": "Urgency-based manipulation",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [
+      {
+        "word": "URGENT",
+        "category": "Urgency-based manipulation",
+        "weight": 0.85,
+        "reason": "High urgency panic cue"
+      },
+      {
+        "word": "disconnected tonight",
+        "category": "Urgency-based manipulation",
+        "weight": 0.88,
+        "reason": "Imminent consequence threat"
+      },
+      {
+        "word": "Call officer immediately",
+        "category": "Urgency-based manipulation",
+        "weight": 0.9,
+        "reason": "Coercive direct contact"
+      }
+    ],
+    "highlightedHtml": "<mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">URGENT</mark>: Your electricity connection will be <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">disconnected tonight</mark> at 9:00 PM due to unpaid balance of Rs 1,420. <mark class=\"bg-rose-500/30 text-rose-300 border-rose-500/50 px-1.5 py-0.5 rounded border font-semibold\">Call officer immediately</mark> at 9876543210.",
+    "explanation": {
+      "summary": "The NLP model flagged this communication with a 92% risk score due to Urgency-based manipulation, Impersonation.",
+      "linguisticFlags": [
+        "Threat of utility disconnection within hours.",
+        "Direct request to contact arbitrary personal cell number."
+      ],
+      "psychologicalTactics": [
+        "Urgency Induction: Fear of losing essential utility."
+      ],
+      "technicalIndicators": [
+        "Informal Contact Routing"
+      ]
+    },
+    "recommendations": [
+      "Do not call the mobile number provided.",
+      "Check pending balance exclusively on the official state electricity board portal or bill."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 93,
+      "nbScore": 90,
+      "tfidfFeatureCount": 168,
+      "tokenCount": 19
+    }
+  },
+  {
+    "id": "CG-lq87f-106",
+    "text": "Hi Akhil, can you review the draft of our NLP project report by this evening? I added Section 4 on Naive Bayes and Logistic Regression evaluation.",
+    "timestamp": "2026-10-31T09:44:43.607Z",
+    "prediction": "Safe",
+    "confidence": 97,
+    "attackCategory": "Legitimate communication",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [],
+    "highlightedHtml": "Hi Akhil, can you review the draft of our NLP project report by this evening? I added Section 4 on Naive Bayes and Logistic Regression evaluation.",
+    "explanation": {
+      "summary": "Natural language analysis indicates neutral linguistic phrasing with low sentiment anomaly and absence of deceptive urgency or harvesting hooks.",
+      "linguisticFlags": [
+        "Zero suspicious terms detected."
+      ],
+      "psychologicalTactics": [],
+      "technicalIndicators": [
+        "Clean Link Profile"
+      ]
+    },
+    "recommendations": [
+      "Message appears legitimate academic collaboration."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 3,
+      "nbScore": 3,
+      "tfidfFeatureCount": 168,
+      "tokenCount": 20
+    }
+  },
+  {
+    "id": "CG-lq87g-107",
+    "text": "Dear customer, suspicious sign-in from Firefox on Linux. If this was not you, please verify your credentials or contact security team.",
+    "timestamp": "2026-10-31T03:44:43.607Z",
+    "prediction": "Suspicious",
+    "confidence": 58,
+    "attackCategory": "Credential theft",
+    "modelUsed": "Ensemble (Best Performing)",
+    "suspiciousKeywords": [
+      {
+        "word": "verify your credentials",
+        "category": "Credential theft",
+        "weight": 0.9,
+        "reason": "Harvesting authentication details"
+      }
+    ],
+    "highlightedHtml": "Dear customer, suspicious sign-in from Firefox on Linux. If this was not you, please <mark class=\"bg-amber-500/30 text-amber-300 border-amber-500/50 px-1.5 py-0.5 rounded border font-semibold\">verify your credentials</mark> or contact security team.",
+    "explanation": {
+      "summary": "The NLP model flagged this communication with a 58% risk score due to Credential theft indicators. Caution is advised.",
+      "linguisticFlags": [
+        "Requests credential review without clear source authentication."
+      ],
+      "psychologicalTactics": [
+        "Mild fear appeal around unauthorized access."
+      ],
+      "technicalIndicators": [
+        "No Link Attached"
+      ]
+    },
+    "recommendations": [
+      "Navigate directly to your provider service portal via your browser bookmark.",
+      "Do not reply directly to this alert."
+    ],
+    "metricsSnapshot": {
+      "lrScore": 59,
+      "nbScore": 56,
+      "tfidfFeatureCount": 168,
+      "tokenCount": 18
+    }
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "CyberGuard AI - Intelligent Social Engineering Attack Detection",
+  "description": "An NLP and Machine Learning powered platform for detecting text-based social engineering attacks across SMS, emails, and messaging platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
